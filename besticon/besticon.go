@@ -459,7 +459,7 @@ func getBodyBytes(r *http.Response) ([]byte, error) {
 
 func setDefaultHeaders(req *http.Request) {
 	req.Header.Set("Accept", "*/*")
-	req.Header.Set("User-Agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 10_0 like Mac OS X) AppleWebKit/602.1.38 (KHTML, like Gecko) Version/10.0 Mobile/14A5297c Safari/602.1")
+	req.Header.Set("User-Agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A356 Safari/604.1'")
 }
 
 func mustInitCookieJar() *cookiejar.Jar {
@@ -531,7 +531,7 @@ var client *http.Client
 var keepImageBytes bool
 
 func init() {
-	setHTTPClient(&http.Client{Timeout: 5 * time.Second})
+	setHTTPClient(&http.Client{Timeout: 2 * time.Second})
 
 	// Needs to be kept in sync with those image/... imports
 	defaultFormats = []string{"png", "gif", "ico"}
