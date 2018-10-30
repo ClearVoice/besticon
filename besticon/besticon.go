@@ -531,7 +531,7 @@ var client *http.Client
 var keepImageBytes bool
 
 func init() {
-	setHTTPClient(&http.Client{Timeout: 20 * time.Second})
+	setHTTPClient(&http.Client{Timeout: 5 * time.Second})
 
 	// Needs to be kept in sync with those image/... imports
 	defaultFormats = []string{"png", "gif", "ico"}
